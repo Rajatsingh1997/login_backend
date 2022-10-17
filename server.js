@@ -19,6 +19,10 @@ mongoose.connect(process.env.mongodburl,{
     console.log(err)
 });
 
+app.get('/users/hello',(req,res)=>{
+    res.send("hello this is working")
+})
+
 app.post('/users/signup',async(req,res)=>{
 
     try {
